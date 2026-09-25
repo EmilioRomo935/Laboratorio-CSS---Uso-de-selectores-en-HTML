@@ -1,0 +1,156 @@
+/* Ejercicio 1 - Selector universal */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ejercicio 2 - Selector de elemento */
+
+h2{
+    color: darkblue;
+}
+
+p{
+    line-height: 1.6;
+}
+
+/* Ejercicio 3 - Selector de clase */
+
+.destacado{
+    font-weight: 700;
+    color: darkred;
+}
+
+/* Ejercicio 4 - Selector de ID */
+
+#encabezado{
+    background-color: lightgray;
+}
+
+/* Ejercicio 5 - Selector descendiente */
+
+/* Parte G - Reto */
+
+/*
+Tipo de selector: Descendiente
+Elementos que selecciona: Los enlaces que están dentro de nav.
+¿Por qué se utilizó este selector?
+Porque permite modificar únicamente los enlaces del menú sin agregar clases.
+*/
+nav a{
+    color: #17365d;
+}
+
+/* Ejercicio 6 - Hijo directo */
+
+/*
+Tipo de selector: Hijo directo
+Elementos que selecciona: Los párrafos que son hijos directos de article.
+¿Por qué se utilizó este selector?
+Porque evita seleccionar párrafos que estén dentro de otros elementos como div.
+*/
+article > p{
+    color: #2f5597;
+}
+
+/* Ejercicio 7 - Hermano adyacente */
+
+/*
+Tipo de selector: Hermano adyacente
+Elementos que selecciona: El primer párrafo inmediatamente después de un h2.
+¿Por qué se utilizó este selector?
+Porque el símbolo + selecciona únicamente al hermano inmediatamente siguiente.
+*/
+h2 + p{
+    color: green;
+}
+
+/* Ejercicio 8 - Hermanos posteriores */
+
+/*
+Tipo de selector: Hermanos posteriores
+Elementos que selecciona: Todos los párrafos posteriores a un h2 que comparten el mismo padre.
+¿Por qué se utilizó este selector?
+Porque el símbolo ~ permite seleccionar todos los hermanos posteriores del tipo indicado.
+*/
+h2 ~ p {
+    background-color: lightyellow;
+} 
+
+/* Ejercicio 9 - Presencia de atributo */ 
+
+[disabled] {
+    opacity: 0.5;
+}
+
+/* Ejercicio 10 - Atributo con valor */
+
+/*
+Tipo de selector: Atributo con valor
+Elementos que selecciona: El input cuyo type es email.
+¿Por qué se utilizó este selector?
+Porque permite identificar el campo de correo utilizando un atributo que ya existe en el HTML.
+*/
+input[type="email"]{
+    border: 2px solid darkred;
+}
+
+a[target="_blank"]{
+    color: purple;
+}
+
+/* Ejercicio 11 - Pseudoclase :hover */
+
+nav a:hover{
+    color: darkred;
+    text-decoration-thickness: 3px;
+}
+
+/* Ejercicio 12 - Pseudoclase :focus */
+
+/*
+Tipo de selector: Pseudoclase
+Elementos que selecciona: Los input cuando reciben el foco.
+¿Por qué se utilizó este selector?
+Porque :focus proporciona retroalimentación visual cuando el usuario selecciona un campo.
+*/
+input:focus{
+    outline: 3px solid blue;
+}
+
+/* Ejercicio 13 - Pseudoclase :disabled */
+
+/*
+Tipo de selector: Pseudoclase
+Elementos que selecciona: El botón que está deshabilitado.
+¿Por qué se utilizó este selector?
+Porque :disabled permite seleccionar un elemento que se encuentra en estado deshabilitado.
+*/
+button:disabled{
+    background-color: lightgray;
+    color: gray;
+}
+
+/* Ejercicio 14 - Pseudoclase :nth-child() */
+
+.recursos li:nth-child(odd){
+    background-color: lightgray;
+}
+
+/* Ejercicio 15 - Pseudoelemento ::first-letter */
+
+.presentacion p::first-letter{
+    font-size: 2em;
+}
+
+/* Ejercicio 16 - Pseudoelemento ::before */
+
+/*
+Tipo de selector: Pseudoelemento
+Elementos que selecciona: La parte anterior al contenido del párrafo con clase importante.
+¿Por qué se utilizó este selector?
+Porque ::before permite agregar contenido decorativo sin modificar el HTML.
+*/
+.importante::before {
+    content: "Aviso: ";
+    font-weight: bold;
+}
